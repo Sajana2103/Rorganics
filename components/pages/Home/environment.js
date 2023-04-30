@@ -15,7 +15,7 @@ const Environment = () => {
           <Image className="xl:hidden block mt-4"  src={"/assets/images/cargo-demo.jpeg"} width={400} height={300} />
 
           <div className="h-px maroon-bg my-12"></div>
-          <div className="flex flex-wrap gap-10">
+          <div className="flex flex-wrap xl:gap-10">
             <div className=" xl:w-1/4">
               <h3 className=" text-lg maroon font-bold leading-none uppercase">
                 RORGANICS ENVIRONMENTAL & SUSTAINABILITY INITIATIVE

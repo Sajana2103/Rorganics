@@ -27,7 +27,7 @@ const WhoWeAre = () => {
         <div className="xl:mt-10 my-4 h-px yellow-bg"></div>
         <div className="xl:flex ">
           <h2 className="heading-4 leading-none font-bold xl:font-normal ">Rorganics Industry Leading Standards</h2>
-          <p className="xl:w-3/4 mt-2 yellow ">We work alongside brand owners to develop and strengthen their
+          <p className="w-3/4 mt-2 yellow ">We work alongside brand owners to develop and strengthen their
             brands. Our key objective is to drive faster brand growth compared
             to their relevent categories, achieved by utilizing category insights and
             ensuring impeccable execution at the point of purchase.

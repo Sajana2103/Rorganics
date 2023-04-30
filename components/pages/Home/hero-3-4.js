@@ -3,7 +3,7 @@ const HeroThirdAndForth = () => {
     <div className=" " >
       <div className="relative ">
         <video className="absolute top-0 left-0 right-0  -z-10 pointer-events-none"
-          autoPlay loop muted playsInline ><source src='assets/videos/world.mp4' /></video>
+          autoPlay loop muted playsInline ><source src='assets/videos/world_low.mp4' /></video>
       </div>
       <div>
 

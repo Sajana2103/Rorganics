@@ -2,8 +2,8 @@ const HeroSecond = () => {
   return (
     <div className="  " >
       <div className="relative ">
-        <video className="absolute top-0 -z-10 pointer-events-none" 
-        autoPlay loop muted playsInline ><source src='assets/videos/city.mov' /></video>
+        <video className="absolute top-0 left-0  -z-10 pointer-events-none" 
+        autoPlay loop muted playsInline ><source src='assets/videos/city_2.mp4' /></video>
       </div>
       <div>
 
