@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="   ">
       <Image loader={customLoader} src={'/assets/images/cargo-demo.jpeg'} width={500} height={400}
-        className="absolute w-screen h-auto object-cover -z-20"
+        className="absolute w-screen h-auto object-cover -z-20" alt="rorganics-footer"
       />
       <div className="xl:pt-48 pt-32 pb-5 xl:px-24 px-4 ">
         <div className="xl:flex gap-20">

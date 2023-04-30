@@ -9,56 +9,56 @@ const CustomerTestimonials = () => {
       <h1 className="heading-2 text-center leading-none mt-10 xl:px-40 px-4">Endorsements from satisfied customers that value our services</h1>
       <div className="  py-20 text-center flex shrink-0 overflow-x-auto gap-10 pl-4 xl:-40">
         <div className="w-48 xl:w-1/4 shrink-0 lightAmber-bg p-6 xl:p-10 rounded-xl">
-          <p className="xl:text-xl text-md ">"Will do everything to
+          <p className="xl:text-xl text-md ">&ldquo;Will do everything to
             meet the highest standards on sustainable transportation. Our services
             promote and incorporate the latest
-            technological developments in environmental issues."
+            technological developments in environmental issues.&ldquo;
           </p>
           <h2 className="heading-4 font-bold  leading-none xl:mt-6 mt-2">Adam Harris</h2>
           <p className="xl:text-xl text-md  leading-none">Company</p>
         </div>
         <div className="w-48 xl:w-1/4 shrink-0 lightAmber-bg p-6 xl:p-10 rounded-xl">
-          <p className="xl:text-xl text-md ">"Will do everything to
+          <p className="xl:text-xl text-md ">&ldquo;Will do everything to
             meet the highest standards on sustainable transportation. Our services
             promote and incorporate the latest
-            technological developments in environmental issues."
+            technological developments in environmental issues.&ldquo;
           </p>
           <h2 className="heading-4 font-bold  leading-none xl:mt-6 mt-2">Adam Harris</h2>
           <p className="xl:text-xl text-md  leading-none">Company</p>
         </div>
         <div className="w-48 xl:w-1/4 shrink-0 lightAmber-bg p-6 xl:p-10 rounded-xl">
-          <p className="xl:text-xl text-md ">"Will do everything to
+          <p className="xl:text-xl text-md ">&ldquo;Will do everything to
             meet the highest standards on sustainable transportation. Our services
             promote and incorporate the latest
-            technological developments in environmental issues."
+            technological developments in environmental issues.&ldquo;
           </p>
           <h2 className="heading-4 font-bold  leading-none xl:mt-6 mt-2">Adam Harris</h2>
           <p className="xl:text-xl text-md  leading-none">Company</p>
         </div>
 
         <div className="w-48 xl:w-1/4 shrink-0 lightAmber-bg p-6 xl:p-10 rounded-xl">
-          <p className="xl:text-xl text-md ">"Will do everything to
+          <p className="xl:text-xl text-md ">&ldquo;Will do everything to
             meet the highest standards on sustainable transportation. Our services
             promote and incorporate the latest
-            technological developments in environmental issues."
+            technological developments in environmental issues.&ldquo;
           </p>
           <h2 className="heading-4 font-bold  leading-none xl:mt-6 mt-2">Adam Harris</h2>
           <p className="xl:text-xl text-md  leading-none">Company</p>
         </div>
         <div className="w-48 xl:w-1/4 shrink-0 lightAmber-bg p-6 xl:p-10 rounded-xl">
-          <p className="xl:text-xl text-md ">"Will do everything to
+          <p className="xl:text-xl text-md ">&ldquo;Will do everything to
             meet the highest standards on sustainable transportation. Our services
             promote and incorporate the latest
-            technological developments in environmental issues."
+            technological developments in environmental issues.&ldquo;
           </p>
           <h2 className="heading-4 font-bold  leading-none xl:mt-6 mt-2">Adam Harris</h2>
           <p className="xl:text-xl text-md  leading-none">Company</p>
         </div>
         <div className="w-48 xl:w-1/4 shrink-0 lightAmber-bg p-6 xl:p-10 rounded-xl">
-          <p className="xl:text-xl text-md ">"Will do everything to
+          <p className="xl:text-xl text-md ">&ldquo;Will do everything to
             meet the highest standards on sustainable transportation. Our services
             promote and incorporate the latest
-            technological developments in environmental issues."
+            technological developments in environmental issues.&ldquo;
           </p>
           <h2 className="heading-4 font-bold  leading-none xl:mt-6 mt-2">Adam Harris</h2>
           <p className="xl:text-xl text-md  leading-none">Company</p>
@@ -79,7 +79,7 @@ const CustomerTestimonials = () => {
           {
             logos.map((logo,idx)=>{
               return(
-                <Image key={idx} className="xl:w-32 w-24 h-auto" src={`/assets/images/logos/${logo}`} width={150} height={100}/>
+                <Image key={idx} alt="rorganics-brands" className="xl:w-32 w-24 h-auto" src={`/assets/images/logos/${logo}`} width={150} height={100}/>
                 )
               })
             }

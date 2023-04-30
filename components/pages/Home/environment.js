@@ -4,7 +4,8 @@ const Environment = () => {
     <div className=" lightAmber-bg xl:py-20 xl:px-24 px-4 py-10">
 
       <div className="flex flex-wrap gap-20 mt-6">
-        <Image className="w-1/2 hidden xl:block"  src={"/assets/images/cargo-demo.jpeg"} width={400} height={300} />
+        <Image className="w-1/2 hidden xl:block"  src={"/assets/images/cargo-demo.jpeg"} width={400} height={300} 
+        alt="rorganics-sustainable-transportation"/>
 
         <div className=" ">
           <h2 className="heading-4 font-bold xl:font-semibold maroon uppercase">WE CARE ABOUT THE ENVIROMENT</h2>
@@ -12,7 +13,8 @@ const Environment = () => {
           <h1 className="heading-2 leading-none maroon my-4">
             We are committed to sustainable transportation
           </h1>
-          <Image className="xl:hidden block mt-4"  src={"/assets/images/cargo-demo.jpeg"} width={400} height={300} />
+          <Image className="xl:hidden block mt-4"  src={"/assets/images/cargo-demo.jpeg"}
+          alt="rorganics-environment-friendly" width={400} height={300} />
 
           <div className="h-px maroon-bg my-12"></div>
           <div className="flex flex-wrap xl:gap-10">

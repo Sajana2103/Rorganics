@@ -43,7 +43,7 @@ const OurServices = () => {
             </div>
           </div>
         </div>
-        <Image className="mt-4" src={"/assets/images/cargo-demo.jpeg"} width={400} height={300}/>
+        <Image alt="rorganics-services" className="mt-4" src={"/assets/images/cargo-demo.jpeg"} width={400} height={300}/>
       </div>
     </div>
   )

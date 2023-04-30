@@ -35,7 +35,7 @@ const WhoWeAre = () => {
         </div>
       </div>
       <div className="mt-4">
-        <Image src="/assets/images/cargo-demo.jpeg" height={400} width={300}/>
+        <Image alt="rorganics-brands-we-help" src="/assets/images/cargo-demo.jpeg" height={400} width={300}/>
       </div>
     </div>
   )
