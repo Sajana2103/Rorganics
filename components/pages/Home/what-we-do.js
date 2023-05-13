@@ -1,12 +1,12 @@
 const WhatWeDo = () => {
   return (
     <div className="xl:h-screen xl:py-20 xl:px-24 px-4 pt-10">
-      <h2 className="heading-4">
+      <h2 className="heading-3">
         What we do
       </h2>
       <div className="xl:flex gap-40">
         <div className=" xl:w-2/5">
-          <h1 className="heading-2 leading-none">A solution for every customer.</h1>
+          <h1 className="heading-2 leading-none split-text-medium">A solution for every customer.</h1>
           <div className="mt-6">
             <div>
               <p className="text-xl xl:text-4xl font-normal">FMCG Import & Export</p>

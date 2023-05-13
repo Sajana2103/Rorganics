@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 
+body {
+  /* overflow-y: scroll; */
+  color: white;
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+ 
+}
 :root {
   --yellow:#fccc6f;
   --maroon:#672349;
@@ -13,19 +21,42 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+.footer-gr{
+  background: linear-gradient(180deg, rgba(255,255,255,1) 8%, rgba(255,255,255,0) 40%);
 }
+.stats{width: 500px;}
+.split-line-large {
+  overflow: hidden;
+  height: auto;
+
+}
+.split-line-medium{
+    overflow: hidden;
+    height: 6rem;
+}
+.split-line-small{
+  overflow: hidden;
+  height: auto;
+}
+
 .yellow{
   color: var(--yellow)
 }
 .yellow-bg{
-  background-color: var(--yellow)
+  background-color: var(--yellow);
 }
+.yellow-fill{
+  fill:var(--yellow);
+
+}
+.maroon-bg{
+  background-color: var(--maroon)
+}
+.menu-strokes{
+  fill:white;
+}
+
 .maroon{
   color:var(--maroon)
 }
@@ -43,19 +74,37 @@
   padding: 0;
 }
 
-body {
-  /* overflow-y: scroll; */
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
- 
-}
 
 #App {
-  height: 100vh;
+  /* height: 100vh; */
   overflow-y: scroll;
 
+}
+#menu-bg{
+  fill: white;
+  width: 50px;
+  height: 50px;
+  margin: 1rem;
+  background-color: var(--maroon);
+  border-radius: 3rem;
+  padding: 0.6rem;
+  transition-duration: 0.3s;
+}
+#menu-bg:hover{
+  fill: var(--maroon);
+  transition-duration: 0.3s;
+  background-color: white;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+#stats-container{
+  /* width: 95vw; */
+  /* overflow: hidden; */
 }
 video{
   max-width: none;
@@ -64,7 +113,7 @@ video{
   font-size: 180px;
 }
 .heading-second{
-  font-size: 120px;
+  font-size: 140px;
 }
 .heading-2{
   font-size: 80px;
@@ -75,6 +124,90 @@ video{
 .heading-4{
  font-size: 24px;
 }
+#footer-bg{
+  /* height: 100vh; */
+  width: 100%;
+  object-fit: cover;
+  object-position: right bottom;
+  position: fixed;
+  z-index: -40;
+  bottom: 0;
+}
+@media only screen and (max-width:1280px) {
+/* xl */
+  .heading-main{
+    font-size: 8rem;
+  }
+  .heading-second{
+    font-size: 6rem;
+  }
+  .heading-2{
+    font-size: 4rem;
+  }
+  .heading-3{
+    font-size: 3rem;
+  }
+  .heading-4{
+   font-size: 2rem;
+  }
+  .stats{width: 400px;}
+  #footer-bg{
+    height: 10%;
+  }
+}
+@media only screen and (max-width:1024px) {
+/* lg */
+  .heading-main{
+    font-size: 6rem;
+  }
+  .heading-second{
+    font-size: 4rem;
+  }
+  .heading-2{
+    font-size: 3rem;
+  }
+  .heading-3{
+    font-size: 2rem;
+  }
+  .heading-4{
+   font-size: 1.5rem;
+  }
+  .split-line-medium,.split--large{
+    height: auto;
+}
+.stats{width: 300px;}
+.footer-gr{
+  background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(255,255,255,0) 20%);
+}
+}
+@media only screen and (max-width:640px) {
+  /* lg */
+  .heading-main{
+    font-size: 2.5rem;
+  }
+  .heading-second{
+    font-size: 2.5rem;
+  }
+  .heading-2{
+    font-size: 1.5rem;
+  }
+  .heading-3{
+    font-size: 1.25rem;
+  }
+  .heading-4{
+   font-size: 1rem;
+  }
+  .stats{width: 200px;}
+  #footer-bg{
+    height: 10%;
+  }
+  .footer-gr{
+    background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(255,255,255,0) 10%);
+  }
+  #sand-dune-bg{
+   
+  }
+  }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   video{
@@ -98,5 +231,29 @@ video{
   .heading-4{
    font-size: 1rem;
   }
-  
+  .split-line-medium,.split-line-large{
+    /* height: auto; */
+}
+#menu-bg{
+  fill: white;
+  width: 30px;
+  height: 30px;
+  margin: 1rem;
+
+}
+#menu-bg:hover{
+  fill: var(--maroon);
+  transition-duration: 0.3s;
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+#footer-bg{
+  height: 140%;
+  position: fixed;
+}
+.footer-gr{
+  background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(255,255,255,0) 5%);
+}
 }

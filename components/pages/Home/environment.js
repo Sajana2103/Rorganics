@@ -4,16 +4,16 @@ const Environment = () => {
     <div className=" lightAmber-bg xl:py-20 xl:px-24 px-4 py-10">
 
       <div className="flex flex-wrap gap-20 mt-6">
-        <Image className="w-1/2 hidden xl:block"  src={"/assets/images/cargo-demo.jpeg"} width={400} height={300} 
+        <Image className="xl:w-1/3 hidden xl:block  object-contain"  src={"/assets/images/home/eco-friendly-delivery.png"} width={400} height={300} 
         alt="rorganics-sustainable-transportation"/>
 
-        <div className=" ">
+        <div className="xl:w-1/2 ">
           <h2 className="heading-4 font-bold xl:font-semibold maroon uppercase">WE CARE ABOUT THE ENVIROMENT</h2>
 
-          <h1 className="heading-2 leading-none maroon my-4">
+          <h1 className="heading-2 leading-none maroon my-4 split-text-medium">
             We are committed to sustainable transportation
           </h1>
-          <Image className="xl:hidden block mt-4"  src={"/assets/images/cargo-demo.jpeg"}
+          <Image className="xl:hidden sm:w-2/3 w-full block mt-4"  src={"/assets/images/home/eco-friendly-delivery.png"}
           alt="rorganics-environment-friendly" width={400} height={300} />
 
           <div className="h-px maroon-bg my-12"></div>
@@ -24,7 +24,7 @@ const Environment = () => {
               </h3>
 
             </div>
-            <div className=" xl:w-2/3">
+            <div className="pt-5 xl:p-0 xl:w-2/3">
               <p className="text-lg maroon leading-tight">RORGANICS will do everything to
                 meet the highest standards on sustainable transportation. Our services
                 promote and incorporate the latest technological developments in environmental issues.

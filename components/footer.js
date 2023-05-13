@@ -1,14 +1,22 @@
 import Image from "next/image"
 import { customLoader } from "./customFunctions"
+import { LogoText, QualityIcons, SocialMediaIcons } from "./icons"
 const Footer = () => {
   return (
-    <footer className="   ">
-      <Image loader={customLoader} src={'/assets/images/cargo-demo.jpeg'} width={500} height={400}
-        className="absolute w-screen h-auto object-cover -z-20" alt="rorganics-footer"
+    <footer className="h-full">
+      {/* <Image loader={customLoader} src={'/assets/images/footer-truck.png'} width={500} height={400}
+        className="absolute -z-10  sm:bottom-0 
+        h-1/2 w-full lg:h-screen lg:w-screen 
+        object-cover lg:object-cover  object-right-bottom lg:object-bottom   "
+        alt="rorganics-footer"
+      /> */}
+      <Image id="footer-bg"  loader={customLoader} src={'/assets/images/footer-truck.png'} loading="eager" width={500} height={400}
+        
+        alt="rorganics-footer"
       />
-      <div className="xl:pt-48 pt-32 pb-5 xl:px-24 px-4 ">
-        <div className="xl:flex gap-20">
-          <div>
+      <div id="" className="xl:pt-80 lg:pt-80 pt-12 pb-5 xl:px-24 px-4 footer-gr font-semibold ">
+        <div className="sm:flex gap-20">
+          <div className="font-semibold">
             <p>Head Office</p>
             <p>Rorganics Trading Co. L.L.C.</p>
             <p>P.O. Box: 112690</p>
@@ -16,9 +24,11 @@ const Footer = () => {
             <p>Investment Park 2, UAE</p>
           </div>
           <div>
-            <h1>Emirates Logo</h1>
+            <Image src="/assets/icons/the-emirates-logo-2.png" width={200} height={300} loader={customLoader}
+              className="border border-white object-contain  w-32" />
+
           </div>
-          <div>
+          <div className="font-semibold focus:font-bold">
             <p>Quick Links</p>
             <br />
             <p>Home</p>
@@ -27,7 +37,7 @@ const Footer = () => {
             <p>Brands</p>
             <p>Contact Us</p>
           </div>
-          <div>
+          <div className="font-semibold">
             <p>More Information</p>
             <br />
             <p>News</p>
@@ -36,42 +46,45 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="xl:flex my-4">
-          <div className="xl:w-1/2 xl:flex gap-20">
-          <div className="">
-            <p>Tel: +971 4 870 2000</p>
-            <p>Fax: +971 4 884 9013/ 14</p>
-          </div>
-          <div>
-            <p>Email: info@rorganics.com</p>
-            <p>Website: www.rorganics.com</p>
-          </div>
-
-          </div>
-          <div className="xl:grid xl:w-1/2">
-            <h1 className="justify-self-end">Social Media Logos</h1>
-          </div>
-          <div>
-          </div>
-        </div>
-
-        <div className="h-px bg-white"></div>
-        <div className="xl:flex gap-20 py-4">
-          <h1 className="xl:w-1/2 heading-2 font-bold leading-none">RORGANICS</h1>
-
-          <div className="w-1/2 grid items-center">
-            <h2 className="justify-self-end">Certification Logos</h2>
+        <div className="sm:flex my-4">
+          <div className="md:w-1/2 md:flex gap-20">
+            <div className="">
+              <p>Tel: +971 4 870 2000</p>
+              <p>Fax: +971 4 884 9013/ 14</p>
             </div>
+            <div>
+              <p>Email: info@rorganics.com</p>
+              <p>Website: www.rorganics.com</p>
+            </div>
+
+          </div>
+          <div className="sm:flex sm:justify-end items-center sm:w-1/2 gap-2">
+            <h1 className=" text-xl">Follow Us</h1>
+
+            <SocialMediaIcons />
+
+          </div>
+          <div>
+          </div>
+        </div>
+
+        <div className="h-px bg-white"></div>
+        <div className="sm:flex gap-10 md:gap-0 py-4">
+          <div className="sm:w-1/2 "><LogoText /></div>
+
+          <div className="sm:w-1/2  items-center flex sm:justify-end">
+            <QualityIcons />
+          </div>
         </div>
         <div className="h-px bg-white"></div>
 
-        <div className="xl:flex gap-20 mt-2">
+        <div className="sm:flex gap-20 mt-2">
           <p className="w-1/2">Rorganics. All Rights Reserved.</p>
-          <div className="xl:w-1/2 flex xl:justify-end"> 
-          <p>Terms & Conditions</p>
-          <p>|</p>
-          <p>Privacy Policy</p>
-            
+          <div className="sm:w-1/2 flex sm:justify-end">
+            <p>Terms & Conditions</p>
+            <p className="mx-2">|</p>
+            <p>Privacy Policy</p>
+
           </div>
         </div>
       </div>

@@ -1,17 +1,17 @@
 const HeroSecond = () => {
   return (
-    <div className="  " >
-      <div className="relative ">
-        <video className="absolute top-0 left-0  -z-10 pointer-events-none" 
+    <div className=" h-screen " >
+      <div className="relative  ">
+        <video className="absolute top-0 left-0 object-cover -z-10 pointer-events-none" 
         autoPlay loop muted playsInline ><source src='assets/videos/city_2.mp4' /></video>
       </div>
       <div>
 
-        <div className="h-screen xl:items-end flex items-center xl:px-24 xl:py-20 px-4  " >
+        <div className=" h-screen xl:items-end flex items-center xl:px-24 xl:py-20 px-4  " >
           <div className="xl:flex gap-10">
           <div className=" xl:w-2/3 ">
 
-            <h1 className="heading-second text-8xl font-normal uppercase leading-none">FMCG SALES & WHOLESALES</h1>
+            <h1 className="heading-second text-8xl font-normal uppercase leading-none split-text-large">FMCG SALES & WHOLESALES</h1>
             <h1 className="heading-1 text-8xl font-normal uppercase leading-none"></h1>
           </div>
 

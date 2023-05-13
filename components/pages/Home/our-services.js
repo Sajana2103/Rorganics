@@ -1,15 +1,16 @@
 import Image from "next/image"
+import { customLoader } from "../../customFunctions"
 const OurServices = () => {
   return(
-    <div className=" lightAmber-bg xl:h-screen xl:py-20 xl:px-24 px-4 py-10">
+    <div id="home-our-services" className=" lightAmber-bg xl:h-screen xl:py-20 xl:pl-24 px-4 py-10">
        
       <h2 className="heading-4 font-semibold maroon uppercase">Our Services</h2>
       <div className="xl:flex mt-6">
-        <div className="xl:w-3/5 ">
-          <h1 className="heading-2 leading-none maroon">Tailor made business solutions
+        <div className="xl:w-1/2 ">
+          <h1 className="heading-2 leading-none maroon split-text-medium">Tailor made business solutions
           to maximize growth
           </h1>
-          <div className="h-px maroon-bg my-12"></div>
+          <div className="h-px maroon-bg my-12 mr-10"></div>
           <div className="flex flex-wrap gap-6">
             <div className=" xl:w-2/5">
               <h3 className="heading-4 maroon font-semibold uppercase">Brands & Market</h3>
@@ -43,7 +44,8 @@ const OurServices = () => {
             </div>
           </div>
         </div>
-        <Image alt="rorganics-services" className="mt-4" src={"/assets/images/cargo-demo.jpeg"} width={400} height={300}/>
+        <Image className="mt-4 object-contain w-full xl:w-1/2"
+       loader={customLoader} alt="rorganics-services" src={"/assets/images/home/Rorganics-brands-collection.png"} width={400} height={300}/>
       </div>
     </div>
   )
