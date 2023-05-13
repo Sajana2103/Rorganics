@@ -1085,7 +1085,7 @@
                     "index" : 1
                 },
                 "metallicFactor" : 0,
-                "roughnessFactor" : 0.6000000238418579
+                "roughnessFactor" : 0.10000000149011612
             }
         },
         {
@@ -1099,7 +1099,7 @@
                     "index" : 3
                 },
                 "metallicFactor" : 0,
-                "roughnessFactor" : 0.6000000238418579
+                "roughnessFactor" : 0.10000000149011612
             }
         },
         {
@@ -1127,7 +1127,7 @@
                     "index" : 5
                 },
                 "metallicFactor" : 0,
-                "roughnessFactor" : 0.6000000238418579
+                "roughnessFactor" : 0.20000000298023224
             }
         },
         {
@@ -1141,7 +1141,7 @@
                     "index" : 7
                 },
                 "metallicFactor" : 0,
-                "roughnessFactor" : 0.6000000238418579
+                "roughnessFactor" : 0.10000000149011612
             }
         },
         {
@@ -1211,7 +1211,7 @@
                     "index" : 11
                 },
                 "metallicFactor" : 0,
-                "roughnessFactor" : 0.6000000238418579
+                "roughnessFactor" : 0.20000000298023224
             }
         },
         {
@@ -1225,7 +1225,7 @@
                     1
                 ],
                 "metallicFactor" : 0,
-                "roughnessFactor" : 0.6000000238418579
+                "roughnessFactor" : 0.10000000149011612
             }
         },
         {
@@ -1339,7 +1339,7 @@
                     1
                 ],
                 "metallicFactor" : 0,
-                "roughnessFactor" : 0.6000000238418579
+                "roughnessFactor" : 0.05000000074505806
             }
         },
         {
@@ -1400,7 +1400,7 @@
                     "index" : 16
                 },
                 "metallicFactor" : 0,
-                "roughnessFactor" : 0.6000000238418579
+                "roughnessFactor" : 0.10000000149011612
             }
         },
         {
@@ -1414,7 +1414,7 @@
                     "index" : 18
                 },
                 "metallicFactor" : 0,
-                "roughnessFactor" : 0.6000000238418579
+                "roughnessFactor" : 0.10000000149011612
             }
         },
         {
@@ -1442,7 +1442,7 @@
                     1
                 ],
                 "metallicFactor" : 0,
-                "roughnessFactor" : 0.6000000238418579
+                "roughnessFactor" : 0.10000000149011612
             }
         },
         {
@@ -1492,7 +1492,7 @@
                     "index" : 20
                 },
                 "metallicFactor" : 0,
-                "roughnessFactor" : 0.6000000238418579
+                "roughnessFactor" : 0.10000000149011612
             }
         },
         {
@@ -1548,7 +1548,7 @@
                     "index" : 24
                 },
                 "metallicFactor" : 0,
-                "roughnessFactor" : 0.6000000238418579
+                "roughnessFactor" : 0.10000000149011612
             }
         },
         {
@@ -1598,7 +1598,7 @@
                     "index" : 26
                 },
                 "metallicFactor" : 0,
-                "roughnessFactor" : 0.6000000238418579
+                "roughnessFactor" : 0.20000000298023224
             }
         },
         {

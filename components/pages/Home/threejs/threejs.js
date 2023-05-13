@@ -92,7 +92,7 @@ function Threejs({ container, isLoaded, models, animations }) {
               // endTrigger:'#home-who-what',
               //snap: directionalSnap(1 / (sections.length - 1)),
               // end: isDesktop.current ? "+=1000px" : '+=1500px',
-              markers:true,id:'who-images',
+              // markers:true,id:'who-images',
   
             }
           },);
