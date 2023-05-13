@@ -14,7 +14,7 @@ const Environment = () => {
             We are committed to sustainable transportation
           </h1>
           <Image className="xl:hidden sm:w-2/3 w-full block mt-4"  src={"/assets/images/home/eco-friendly-delivery.png"}
-          alt="rorganics-environment-friendly" width={400} height={300} />
+          loading="eager" alt="rorganics-environment-friendly" width={400} height={300} />
 
           <div className="h-px maroon-bg my-12"></div>
           <div className="flex flex-wrap xl:gap-10">

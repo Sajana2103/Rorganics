@@ -44,7 +44,7 @@ const OurServices = () => {
             </div>
           </div>
         </div>
-        <Image className="mt-4 object-contain w-full xl:w-1/2"
+        <Image className="mt-4 object-contain w-full xl:w-1/2" loading="eager"
        loader={customLoader} alt="rorganics-services" src={"/assets/images/home/Rorganics-brands-collection.png"} width={400} height={300}/>
       </div>
     </div>

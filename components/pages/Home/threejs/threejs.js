@@ -128,11 +128,15 @@ function Threejs({ container, isLoaded, models, animations }) {
         },);
         setupSplits(SplitText,gsap)
         setTimeout(() => {
+          smoother.scrollTop(0)
 
-          gsap.timeline({defaults:{ease:'Power1.In',duration:1}})
+          gsap.timeline({defaults:{ease:'Power1.In',duration:1},onComplete:
+        () => {
+          smoother.paused(false)
+        }})
           .to('#loadingScreen',{yPercent:-100,duration:0.5,})
           .to('#loadingScreen',{display:'none',duration:0.1})
-          smoother.paused(false)
+         
         },1500)
       })
       return () => ctx.revert()
