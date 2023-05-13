@@ -463,7 +463,8 @@ export const Logo = () => {
 }
 export const LogoLoading = () => {
   return(
-<svg className="fill-white w-full sm:w-1/2" version="1.1" id="Layer_1"  x="0px" y="0px"
+		<div className="w-1/2 ">
+<svg className="fill-white  " version="1.1" id="Layer_1"  x="0px" y="0px"
 	 viewBox="0 0 356.87 109.57" >
 
 <g>
@@ -781,6 +782,9 @@ export const LogoLoading = () => {
 	</g>
 </g>
 </svg>
+<h1 className="heading-2 text-center">Loading...</h1>
+
+		</div>
 
   )
 }

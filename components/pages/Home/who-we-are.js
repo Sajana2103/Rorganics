@@ -44,25 +44,25 @@ const WhoWeAre = () => {
             </div>
           </div>
           <div id="who-images-container" className="mt-4 flex flex-nowrap xl:gap-20 gap-12 overflow-x-auto md:overflow-x-hidden overflow-y-hidden">
-            <div className="w-72 lg:h-72 h-48  shrink-0 who-image">
+            <div className="w-1/3 shrink-0 who-image">
 
-              <Image loading="eager" loader={customLoader} className="h-80 object-cover" alt="rorganics-brands-we-help" src="/assets/images/slider/1.jpg" height={400} width={300} />
+              <Image loading="eager" loader={customLoader} className="w-full h-full" alt="rorganics-brands-we-help" src="/assets/images/slider/1.jpg" height={400} width={300} />
             </div>
-            <div className="w-72 lg:h-72 h-48  shrink-0 who-image">
+            <div className="w-1/3 shrink-0 who-image">
 
-              <Image loading="eager" loader={customLoader} className="h-80 object-cover" alt="rorganics-brands-we-help" src="/assets/images/slider/2.jpg" height={400} width={300} />
+              <Image loading="eager" loader={customLoader} className="w-full h-full" alt="rorganics-brands-we-help" src="/assets/images/slider/2.jpg" height={400} width={300} />
             </div>
-            <div className="w-72 lg:h-72 h-48  shrink-0 who-image">
+            <div className="w-1/3 shrink-0 who-image">
 
-              <Image loading="eager" loader={customLoader} className="h-80 object-cover" alt="rorganics-brands-we-help" src="/assets/images/slider/3.jpg" height={400} width={300} />
+              <Image loading="eager" loader={customLoader} className="w-full h-full" alt="rorganics-brands-we-help" src="/assets/images/slider/3.jpg" height={400} width={300} />
             </div>
-            <div className="w-72 lg:h-72 h-48  shrink-0 who-image">
+            <div className="w-1/3 shrink-0 who-image">
 
-              <Image loading="eager" loader={customLoader} className="h-80 object-cover" alt="rorganics-brands-we-help" src="/assets/images/slider/4.jpg" height={400} width={300} />
+              <Image loading="eager" loader={customLoader} className="w-full h-full" alt="rorganics-brands-we-help" src="/assets/images/slider/4.jpg" height={400} width={300} />
             </div>
-            <div className="w-72 lg:h-72 h-48  shrink-0 who-image">
+            <div className="w-1/3 shrink-0 who-image">
 
-              <Image loading="eager" loader={customLoader} className="h-80 object-cover" alt="rorganics-brands-we-help" src="/assets/images/slider/5.jpg" height={400} width={300} />
+              <Image loading="eager" loader={customLoader} className="w-full h-full" alt="rorganics-brands-we-help" src="/assets/images/slider/5.jpg" height={400} width={300} />
             </div>
 
 

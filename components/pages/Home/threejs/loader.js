@@ -69,8 +69,7 @@ const Loading = ({container}) => {
         }, (load) => console.log(load))
         objects[idx].group.add(gltf.scene)
 
-        models.push(new THREE.Group())
-        models[idx].add(gltf.scene)
+        models.push(gltf.scene)
       })
     }
   })

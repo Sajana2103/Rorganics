@@ -113,7 +113,7 @@ const Navigation = () => {
   return (
     <div ref={navRef}>
       <div id="loadingScreen" className=" bg-rose-950 fixed top-0 bottom-0 right-0 left-0 z-50
-      flex justify-center items-center 
+      flex flex-wrap justify-center text-center items-center
       ">
         <LogoLoading/>
       </div>
