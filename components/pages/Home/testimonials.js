@@ -73,7 +73,7 @@ const CustomerTestimonials = () => {
           execution at the point of sale.
         </p>
         <div className="grid justify-center xl:mt-28 mt-8">
-    <Image className="object-contain w-full"
+    <Image alt="rorganic-brands" className="object-contain w-full"
      loader={customLoader} width={400} height={300}loading="eager" src='/assets/images/home/brand-icons.png'/>
           {/* <div className="grid xl:grid-cols-4 grid-cols-2 xl:gap-x-8 gap-4
          justify-items-center">

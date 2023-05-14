@@ -5,6 +5,7 @@ import { ScrollSmoother } from "gsap/dist/ScrollSmoother"
 import { gsap } from "gsap"
 import { useState, useRef, useEffect } from "react"
 import { useThrottledCallback } from "use-debounce"
+
 const Navigation = () => {
   const router = useRouter()
   const { pathname } = router
@@ -14,13 +15,19 @@ const Navigation = () => {
   const menuRef = useRef()
   const splitWords = useRef()
   const navRef = useRef()
-
+  let splitArr = []
   useEffect(() => {
     if (navRef.current) {
       // gsap.registerPlugin(ScrollTrigger)
       setPath(window.location.pathname)
-      splitWords.current = pathname.split('/')
-      console.log('split words', pathname, splitWords)
+      splitArr  =pathname.split('/')
+      splitWords.current =splitArr
+      let dots = gsap.utils.toArray(".dot");
+      gsap.set(dots,{opacity:0})
+      gsap.timeline({defaults:{ease:'Power1.In',duration:0.5}})
+      .to(dots,{opacity:1,stagger:0.3})
+      .repeat(-1)
+      // console.log('split words', pathname, splitWords)
     }
   }, [path,pathname])
   function capitalizeFirstLetter(str) {

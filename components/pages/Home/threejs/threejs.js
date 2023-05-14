@@ -29,7 +29,15 @@ function Threejs({ container, isLoaded, models, animations }) {
   useEffect(() => {
     if (sceneRef.current && isLoaded) {
       let smoother = ScrollSmoother.get()
-      smoother.paused(true)
+      if(smoother){
+
+        smoother.paused(true)
+        smoother.scrollTop(0)
+      } else{
+        window.scrollTo(0,0)
+        gsap.to(document.querySelector('body'),{overflowY:'hidden'})
+      }
+
       windowRef.current = window
       isDesktop.current = window.devicePixelRatio < 2
       init()
@@ -128,11 +136,15 @@ function Threejs({ container, isLoaded, models, animations }) {
         },);
         setupSplits(SplitText,gsap)
         setTimeout(() => {
-          smoother.scrollTop(0)
 
           gsap.timeline({defaults:{ease:'Power1.In',duration:1},onComplete:
         () => {
-          smoother.paused(false)
+          if(smoother){
+
+            smoother.paused(false)
+          } else{
+            gsap.to(document.querySelector('body'),{overflowY:'scroll'})
+          }
         }})
           .to('#loadingScreen',{yPercent:-100,duration:0.5,})
           .to('#loadingScreen',{display:'none',duration:0.1})

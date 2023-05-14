@@ -4,15 +4,10 @@ import { LogoText, QualityIcons, SocialMediaIcons } from "./icons"
 const Footer = () => {
   return (
     <footer className="h-full">
-      {/* <Image loader={customLoader} src={'/assets/images/footer-truck.png'} width={500} height={400}
-        className="absolute -z-10  sm:bottom-0 
-        h-1/2 w-full lg:h-screen lg:w-screen 
-        object-cover lg:object-cover  object-right-bottom lg:object-bottom   "
-        alt="rorganics-footer"
-      /> */}
-      <Image id="footer-bg"  loader={customLoader} src={'/assets/images/footer-truck.png'} loading="eager" width={500} height={400}
+     
+      <Image id="footer-bg" alt="rorganics-footer" loader={customLoader} src={'/assets/images/footer-truck.png'} loading="eager" width={500} height={400}
         
-        alt="rorganics-footer"
+        
       />
       <div id="" className="xl:pt-80 lg:pt-80 pt-12 pb-5 xl:px-24 px-4 footer-gr font-semibold ">
         <div className="sm:flex gap-20">
@@ -24,7 +19,7 @@ const Footer = () => {
             <p>Investment Park 2, UAE</p>
           </div>
           <div>
-            <Image src="/assets/icons/the-emirates-logo-2.png" width={200} height={300} loader={customLoader}
+            <Image alt="emirates-rorganics" src="/assets/icons/the-emirates-logo-2.png" width={200} height={300} loader={customLoader}
               className="border border-white object-contain  w-32" />
 
           </div>

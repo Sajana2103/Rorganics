@@ -6,7 +6,7 @@ const WhoWeAre = () => {
   return (
     <div id='home-who-what' className="">
 
-      <Image id="sand-dune-bg"
+      <Image id="sand-dune-bg" alt="rorganics-dubai"
         className="absolute -z-30 w-screen object-cover lg:h-screen 
        lg:left-0 lg:right-0 h-screen"
         loading="eager" src={'/assets/images/home/bg-sand-dunes.jpg'} width={1000} height={1000} loader={customLoader} />
