@@ -34,6 +34,7 @@ const Loading = ({container}) => {
   // loader.setPath(hostname)
   loader.setDRACOLoader(dracoLoader);
   objects.forEach((object, idx) => {
+    models[idx] = new THREE.Group()
     if (typeof window !== 'undefined') {
       hostname = window.location.href;
       console.log('hostname', hostname)
@@ -69,7 +70,7 @@ const Loading = ({container}) => {
         }, (load) => console.log(load))
         objects[idx].group.add(gltf.scene)
 
-        models.push(gltf.scene)
+        models[idx].add(gltf.scene)
       })
     }
   })
