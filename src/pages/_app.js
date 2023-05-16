@@ -20,7 +20,8 @@ export default function App({ Component, pageProps }) {
     if (mainRef.current) {
       gsap.registerPlugin(ScrollTrigger,ScrollSmoother,SplitText,InertiaPlugin,MorphSVGPlugin)
       isDesktop.current = window.devicePixelRatio < 2 
-      let pages = document.querySelectorAll('.page-content-wrapper') 
+      let pages = document.querySelector('.main-page') 
+      // setupMenuTextAnimation(pages,gsap)
 
       
       if(isDesktop.current){
@@ -30,7 +31,6 @@ export default function App({ Component, pageProps }) {
           smooth: 1.5,
           effects: true,
         })
-        setupMenuTextAnimation(pages,gsap)
       }
     }
   }, [])

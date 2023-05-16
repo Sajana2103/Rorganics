@@ -6,7 +6,7 @@ const CustomerTestimonials = () => {
     'knorr.png', 'nestle.png', 'knorr.png', 'nestle.png',]
   return (
     <div id="home-testimonials" className="page-content-wrapper light-bg">
-      <div className=" bg-white  maroon  xl:py-32  py-10 ">
+      <div className="light-bg bg-white  maroon  xl:py-32  py-10 ">
 
       
       <h3 className="heading-4 font-bold text-center xl:px-40 px-4">CUSTOMER TESTIMONIALS</h3>

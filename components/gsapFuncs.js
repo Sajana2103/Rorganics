@@ -2,19 +2,21 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 export const setupMenuTextAnimation = (page,gsap) => {
   ScrollTrigger.getAll()
   console.log(page)
-  page.forEach((child,idx) => {
+  page.childNodes.forEach((child,idx) => {
     let toggleActions ='play complete restart reset'
     // console.log('menuTextANIMATIONS',child)
+    console.log(child)
     if(child.classList.contains('light-bg')){
       
-      console.log('LIGHT BG',child)
+      // console.log('LIGHT BG',child)
       gsap.to('#nav-logo',{
         scrollTrigger:{
           trigger:child,
           start:'top top',
-          endTrigger:page[idx+1],
-          // end: "+=2500",
+          // endTrigger:page[idx+1],
+          // end: "bottom +=2500px",
           toggleActions:toggleActions,
+          id:'Light BG '+idx,markers:true
         },fill:'#672349',duration:0.2
       })
       gsap.to('.menu-text1',{
@@ -22,6 +24,8 @@ export const setupMenuTextAnimation = (page,gsap) => {
           trigger:child,
           start:'top +=30px',
           // end:'bottom bottom',
+          // end: "bottom +=2500px",
+
           toggleActions:toggleActions
         },color:'#672349',duration:0.2,
         // textShadow: '1px 1px 3px  white',
@@ -30,14 +34,16 @@ export const setupMenuTextAnimation = (page,gsap) => {
     } 
     else {
       // console.log('wrapper children',child.classList.contains('blue-gr2'))
-      console.log('DArk BG',child)
+      // console.log('DArk BG',child)
 
       gsap.to('#nav-logo',{
         scrollTrigger:{
           trigger:child,
           start:'top +=30px',
           // end:'bottom bottom',
-          toggleActions:toggleActions
+          toggleActions:toggleActions,
+          id:'DARK BG '+idx,markers:true
+
         },fill:'white',duration:0.2,
       })
       gsap.to('.menu-text1',{

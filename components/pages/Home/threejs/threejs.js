@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/dist/ScrollSmoother';
 import { SplitText } from 'gsap/dist/SplitText';
 import { gsap } from 'gsap';
-import { setupSplits} from '../../../gsapFuncs';
+import { setupSplits,setupMenuTextAnimation} from '../../../gsapFuncs';
 
 function Threejs({ container, isLoaded, models, animations }) {
   // console.log(container,isLoaded,models,animations)
@@ -57,6 +57,7 @@ function Threejs({ container, isLoaded, models, animations }) {
             start: 'top top',
             pin: true,
             scrub: 0.1,
+            anticipatePin:1,
             //snap: directionalSnap(1 / (sections.length - 1)),
             end:isDesktop.current? "+=2500" : '+=3000',
             // end:'bottom bottom',
@@ -87,11 +88,11 @@ function Threejs({ container, isLoaded, models, animations }) {
           
           ease: "none", // <-- IMPORTANT!
           scrollTrigger: {
-            trigger: "#sand-dune-bg",
+            trigger: "#home-who-what",
             start: 'top top',
-            pin: true,
+            pin: '#sand-dune-bg',
             scrub: 0.1,
-            // endTrigger:'#home-who-what',
+            endTrigger:'#home-who-what',
             //snap: directionalSnap(1 / (sections.length - 1)),
             end:  '+=4000px',
             // markers:true,id:'who-images',
@@ -107,6 +108,8 @@ function Threejs({ container, isLoaded, models, animations }) {
               start: 'top top',
               pin:true,
               scrub: 0.1,
+              end:  '+=1000px',
+
               // endTrigger:'#home-who-what',
               //snap: directionalSnap(1 / (sections.length - 1)),
               // end: isDesktop.current ? "+=1000px" : '+=1500px',
@@ -144,7 +147,9 @@ function Threejs({ container, isLoaded, models, animations }) {
             // markers:true,id:'testimonials'
           }
         },);
-
+        let pages = document.querySelector('.main-page') 
+        setupMenuTextAnimation(pages,gsap)
+  
         setupSplits(SplitText,gsap)
         setTimeout(() => {
 
