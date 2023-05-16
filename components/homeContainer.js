@@ -22,11 +22,14 @@ if(mainRef.current){
     <div ref={mainRef} className="main-page">
       <HeroFirst />
       <HeroSecond /> 
+      <div className="light-bg">
+
       <HeroThirdAndForth />
+      </div>
       <WhoWeAre />
+      <div className="light-bg">
       <OurServices />
       <Environment />
-      <div className="light-bg">
 
       <CustomerTestimonials />
       </div>

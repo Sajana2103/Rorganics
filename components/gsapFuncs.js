@@ -16,7 +16,7 @@ export const setupMenuTextAnimation = (page,gsap) => {
           // endTrigger:page[idx+1],
           // end: "bottom +=2500px",
           toggleActions:toggleActions,
-          id:'Light BG '+idx,markers:true
+          // id:'Light BG '+idx,markers:true
         },fill:'#672349',duration:0.2
       })
       gsap.to('.menu-text1',{
@@ -42,7 +42,7 @@ export const setupMenuTextAnimation = (page,gsap) => {
           start:'top +=30px',
           // end:'bottom bottom',
           toggleActions:toggleActions,
-          id:'DARK BG '+idx,markers:true
+          // id:'DARK BG '+idx,markers:true
 
         },fill:'white',duration:0.2,
       })
