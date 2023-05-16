@@ -4,14 +4,14 @@ import RorganicsStats from "./rorganics-stats"
 
 const WhoWeAre = () => {
   return (
-    <div id='home-who-what' className="">
+    <div id='home-who-what' className=" page-content-wrapper">
 
       <Image id="sand-dune-bg" alt="rorganics-dubai"
         className="absolute -z-30 w-screen object-cover lg:h-screen 
        lg:left-0 lg:right-0 h-screen"
         loading="eager" src={'/assets/images/home/bg-sand-dunes.jpg'} width={1000} height={1000} loader={customLoader} />
       <div id="home-who-we-are" >
-        <div className="xl:h-screen xl:py-20 xl:px-24 px-4 pt-32">
+        <div className="xl:h-screen xl:py-32 xl:px-24 px-4 pt-32">
           <h2 className="heading-3 font-bold xl:font-normal">Who We Are</h2>
           <div className="xl:flex xl:gap-20 mt-2">
             <h1 className="xl:w-3/4 heading-2 leading-none font-semibold xl:font-normal split-text-medium">Rorganics aims to be the favored

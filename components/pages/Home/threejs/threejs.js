@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, } from 'react'
 import * as THREE from 'three'
 import Stats from 'three/addons/libs/stats.module.js'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -8,7 +8,8 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/dist/ScrollSmoother';
 import { SplitText } from 'gsap/dist/SplitText';
 import { gsap } from 'gsap';
-import { setupSplits } from '../../../gsapFuncs';
+import { setupSplits} from '../../../gsapFuncs';
+
 function Threejs({ container, isLoaded, models, animations }) {
   // console.log(container,isLoaded,models,animations)
   let skyUniforms
@@ -18,7 +19,7 @@ function Threejs({ container, isLoaded, models, animations }) {
   let controls, water, sun, mesh;
   let pos = new THREE.Vector3()
   let parameters = {
-    elevation: 2,
+    elevation: 5,
     azimuth: 180
   };
   const sceneRef = useRef()
@@ -50,8 +51,6 @@ function Threejs({ container, isLoaded, models, animations }) {
         let sections = gsap.utils.toArray(".stats");
         let testimonials = gsap.utils.toArray(".testimonial");
         let whoImages = gsap.utils.toArray(".who-image");
-
-        ScrollTrigger.getAll()
         let innovativeTween = gsap.timeline({
           scrollTrigger: {
             trigger: '#home-innovative',
@@ -59,20 +58,31 @@ function Threejs({ container, isLoaded, models, animations }) {
             pin: true,
             scrub: 0.1,
             //snap: directionalSnap(1 / (sections.length - 1)),
-            // end:isDesktop.current? "+=1500" : '+=3500',
+            end:isDesktop.current? "+=2500" : '+=3000',
             // end:'bottom bottom',
             // endTrigger:'#home-who-what',
             // markers:true,id:'threejs'
           }
         })
-        
-        innovativeTween.to(camera.position,{x:-26,y:197,z:8},'<')
-        innovativeTween.to(pos, { x:10,y: 205,z:10 }, '<')
+        if(isDesktop.current){
+          innovativeTween.to(camera.position,{x:-26,y:197,z:8},'<')
+          innovativeTween.to(pos, { x:10,y: 205,z:10 }, '<')
+        } else {
+          innovativeTween.to(camera.position,{x:-100,y:197,z:0},'<')
+          innovativeTween.to(pos, { x:0,y: 170,z:0 }, '<')
+        }
         innovativeTween.to('.threejs-content-1',{yPercent: -100 ,},'<+=50%')
         innovativeTween.to('.threejs-content-1',{opacity:0},'<')
         innovativeTween.to('.threejs-content-2',{opacity:1},'<')
         innovativeTween.to('.threejs-content-2',{yPercent: -100 ,},'<')
 
+        if(isDesktop.current){
+          innovativeTween.to(camera.position,{x:20,y:210,z:50},)
+          innovativeTween.to(pos, { x:25,y: 205,z:0 }, '<')
+        } else {
+          innovativeTween.to(camera.position,{x:-20,y:200,z:40})
+          innovativeTween.to(pos, { x:0,y: 190,z:0 },'<' )
+        }
         let whoWeAreTween = gsap.to('#home-who-what', {
           
           ease: "none", // <-- IMPORTANT!
@@ -134,6 +144,7 @@ function Threejs({ container, isLoaded, models, animations }) {
             // markers:true,id:'testimonials'
           }
         },);
+
         setupSplits(SplitText,gsap)
         setTimeout(() => {
 
@@ -143,13 +154,16 @@ function Threejs({ container, isLoaded, models, animations }) {
 
             smoother.paused(false)
           } else{
+            window.scrollTo(0,0)
             gsap.to(document.querySelector('body'),{overflowY:'scroll'})
           }
         }})
           .to('#loadingScreen',{yPercent:-100,duration:0.5,})
           .to('#loadingScreen',{display:'none',duration:0.1})
-         
+          
+    
         },1500)
+       
       })
       return () => ctx.revert()
 
@@ -176,9 +190,12 @@ function Threejs({ container, isLoaded, models, animations }) {
       camera.position.set(30, 50, 100);
       pos.y = 30
     } else {
-      camera.position.set(30, 40, 200);
+      camera.position.set(-120, 20, 0);
       console.log(pos)
-      pos.x = 100
+      pos.x = 0
+      pos.y = 50
+      pos.z= 0
+
     }
 
     //

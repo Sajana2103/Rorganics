@@ -1,7 +1,9 @@
 const RorganicsStats = () => {
   return (
-    <div id="home-statistics" className="  xl:py-20 xl:px-24 px-4 py-10">
+    <div id="home-statistics" className="  ">
+      <div className="xl:py-20 xl:px-24 px-4 py-10">
 
+      
       <h4 className="heading-4 font-semibold ">RORGANICS STATISTICS
         <span className="yellow"> 2019 - 2023</span>
         <span className=" text-base "> Our main focus is on accelerating brand growth beyond the performance of their
@@ -23,6 +25,7 @@ const RorganicsStats = () => {
           <p className="text-right">Services provided monthly</p>
         </div>
 
+      </div>
       </div>
     </div>
   )

@@ -1,8 +1,9 @@
 import Image from "next/image"
 const Environment = () => {
   return (
-    <div className=" lightAmber-bg xl:py-20 xl:px-24 px-4 py-10">
-
+    <div className="  light-bg page-content-wrapper">
+      <div className="lightAmber-bg xl:py-20 xl:px-24 px-4 py-10 ">
+        
       <div className="flex flex-wrap gap-20 mt-6">
         <Image className="xl:w-1/3 hidden xl:block  object-contain"  src={"/assets/images/home/eco-friendly-delivery.png"} width={400} height={300} 
         alt="rorganics-sustainable-transportation"/>
@@ -41,6 +42,8 @@ const Environment = () => {
           </div>
         </div>
       </div>
+      </div>
+
     </div>
   )
 }

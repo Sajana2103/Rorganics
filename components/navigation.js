@@ -119,7 +119,7 @@ const Navigation = () => {
   const throttledClick = useThrottledCallback(openMenu, 1000, { trailing: false })
   return (
     <div ref={navRef}>
-      <div id="loadingScreen" className=" bg-rose-950 fixed top-0 bottom-0 right-0 left-0 z-50
+      <div id="loadingScreen" className=" maroon-bg fixed top-0 bottom-0 right-0 left-0 z-50
       flex flex-wrap justify-center text-center items-center
       ">
         <LogoLoading/>

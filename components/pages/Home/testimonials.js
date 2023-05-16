@@ -5,7 +5,10 @@ const CustomerTestimonials = () => {
   const logos = ['knorr.png', 'nestle.png', 'knorr.png', 'nestle.png', 'knorr.png', 'nestle.png',
     'knorr.png', 'nestle.png', 'knorr.png', 'nestle.png',]
   return (
-    <div id="home-testimonials" className=" bg-white  maroon  xl:py-32  py-10">
+    <div id="home-testimonials" className="page-content-wrapper light-bg">
+      <div className=" bg-white  maroon  xl:py-32  py-10 ">
+
+      
       <h3 className="heading-4 font-bold text-center xl:px-40 px-4">CUSTOMER TESTIMONIALS</h3>
       <h1 className="heading-2 text-center leading-none mt-10 xl:px-40 px-4  split-text-medium">Endorsements from satisfied customers that value our services</h1>
       <div className="  py-20 text-center flex shrink-0 overflow-x-auto gap-10 pl-4 xl:-40">
@@ -66,7 +69,7 @@ const CustomerTestimonials = () => {
         </div>
 
       </div>
-      <div className="maroon text-center xl:px-40 px-4 mt-20">
+      <div className="maroon text-center xl:px-40 px-4 mt-20 page-content-wrapper">
         <h2 className="heading-4 font-bold">BRANDS WE HELP BUILD</h2>
         <p className="text-xl px-4 xl:px-40">Accelerating brand growth beyond the performance of their respective
           categories, achieved through expert category analysis and flawless
@@ -87,6 +90,7 @@ const CustomerTestimonials = () => {
             }
           </div> */}
         </div>
+      </div>
       </div>
     </div>
   )

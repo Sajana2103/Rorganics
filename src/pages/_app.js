@@ -9,7 +9,7 @@ import { gsap } from 'gsap'
 import { useEffect, useRef } from 'react'
 import Navigation from '../../components/navigation'
 import Footer from '../../components/footer'
-import { setupSplits } from '../../components/gsapFuncs';
+import { setupMenuTextAnimation, setupSplits } from '../../components/gsapFuncs';
 import Modal from '../../components/modal';
 
 const figtree = Figtree({ subsets: ['latin'] })
@@ -20,6 +20,9 @@ export default function App({ Component, pageProps }) {
     if (mainRef.current) {
       gsap.registerPlugin(ScrollTrigger,ScrollSmoother,SplitText,InertiaPlugin,MorphSVGPlugin)
       isDesktop.current = window.devicePixelRatio < 2 
+      let pages = document.querySelectorAll('.page-content-wrapper') 
+
+      
       if(isDesktop.current){
         ScrollSmoother.create({
           wrapper: '.smooth-wrapper',
@@ -27,6 +30,7 @@ export default function App({ Component, pageProps }) {
           smooth: 1.5,
           effects: true,
         })
+        setupMenuTextAnimation(pages,gsap)
       }
     }
   }, [])

@@ -1,34 +1,21 @@
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 export const setupMenuTextAnimation = (page,gsap) => {
-  console.log('blue gr2',page)
-  page.childNodes.forEach((child) => {
+  ScrollTrigger.getAll()
+  console.log(page)
+  page.forEach((child,idx) => {
     let toggleActions ='play complete restart reset'
     // console.log('menuTextANIMATIONS',child)
-    if(child.classList.contains('blue-gr2')){
-      if(child.id==='covid'){
-        gsap.to('.st0',{
-          scrollTrigger:{
-            trigger:child,
-            start:'top top',
-            end: "+=2500",
-            toggleActions:toggleActions,
-          },fill:'white',stroke:'white',duration:0.2
-        })
-        gsap.to('.menu-text1',{
-          scrollTrigger:{
-            trigger:child,
-            start:'top top',
-            end: "+=2500",
-            toggleActions:toggleActions
-          },color:'white',duration:0.2
-        })
-      }
-      gsap.to('.st0',{
+    if(child.classList.contains('light-bg')){
+      
+      console.log('LIGHT BG',child)
+      gsap.to('#nav-logo',{
         scrollTrigger:{
           trigger:child,
-          start:'top +=30px',
-          // end:'bottom bottom',
+          start:'top top',
+          endTrigger:page[idx+1],
+          // end: "+=2500",
           toggleActions:toggleActions,
-        },fill:'white',stroke:'white',duration:0.2
+        },fill:'#672349',duration:0.2
       })
       gsap.to('.menu-text1',{
         scrollTrigger:{
@@ -36,20 +23,22 @@ export const setupMenuTextAnimation = (page,gsap) => {
           start:'top +=30px',
           // end:'bottom bottom',
           toggleActions:toggleActions
-        },color:'white',duration:0.2,
+        },color:'#672349',duration:0.2,
         // textShadow: '1px 1px 3px  white',
 
       })
-    } else {
+    } 
+    else {
       // console.log('wrapper children',child.classList.contains('blue-gr2'))
+      console.log('DArk BG',child)
 
-      gsap.to('.st0',{
+      gsap.to('#nav-logo',{
         scrollTrigger:{
           trigger:child,
           start:'top +=30px',
           // end:'bottom bottom',
           toggleActions:toggleActions
-        },fill:'var(--blue)',stroke:'var(--blue)',duration:0.2,
+        },fill:'white',duration:0.2,
       })
       gsap.to('.menu-text1',{
         scrollTrigger:{
@@ -57,7 +46,7 @@ export const setupMenuTextAnimation = (page,gsap) => {
           start:'top +=30px',
           // end:'bottom bottom',
           toggleActions:toggleActions
-        },color:'var(--blue)',duration:0.2
+        },color:'white',duration:0.2
         // ,textShadow: '1px 1px 3px var(--blue)',
       })
     }

@@ -11,7 +11,7 @@ import WhoWeAre from "./pages/Home/who-we-are"
 const HomeContainer = () => {
 
   return (
-    <div >
+    <div className="main-page">
       <HeroFirst />
       <HeroSecond /> 
       <HeroThirdAndForth />

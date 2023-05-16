@@ -2,8 +2,8 @@ import Image from "next/image"
 import { customLoader } from "../../customFunctions"
 const OurServices = () => {
   return(
-    <div id="home-our-services" className=" lightAmber-bg xl:h-screen xl:py-20 xl:pl-24 px-4 py-10">
-       
+    <div id="home-our-services" className="page-content-wrapper light-bg">
+       <div className="lightAmber-bg xl:h-screen xl:py-20 xl:pl-24 px-4 py-10 page-content-wrapper">
       <h2 className="heading-4 font-semibold maroon uppercase">Our Services</h2>
       <div className="xl:flex mt-6">
         <div className="xl:w-1/2 ">
@@ -46,6 +46,7 @@ const OurServices = () => {
         </div>
         <Image className="mt-4 object-contain w-full xl:w-1/2" loading="eager"
        loader={customLoader} alt="rorganics-services" src={"/assets/images/home/Rorganics-brands-collection.png"} width={400} height={300}/>
+      </div>
       </div>
     </div>
   )

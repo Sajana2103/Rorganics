@@ -7,7 +7,7 @@ const HeroThirdAndForth = () => {
   const contentRef = useRef()
 
   return (
-    <div className="h-screen"  ref={containerRef} id="home-innovative" >
+    <div className="h-screen light-bg page-content-wrapper"  ref={containerRef} id="home-innovative" >
       <div className="relative  threejs-animation">
         <Loading container={contentRef.current} />
 
@@ -38,7 +38,7 @@ const HeroThirdAndForth = () => {
           </div>
         
         <div id="home-diversed" className="mt-24 xl:mt-4 threejs-content-2" >
-          <div className="flex flex-wrap items-center gap-4 xl:block ">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4 xl:block ">
             <h1 className="heading-second self font-normal uppercase leading-none xl:text-right split-text-large">
               Diversified
             </h1>
@@ -48,7 +48,7 @@ const HeroThirdAndForth = () => {
           </div>
 
 
-          <div className="mt-10 xl:text-right flex xl:justify-end">
+          <div className="mt-4 xl:mt-10 xl:text-right flex xl:justify-end">
             <div className="xl:w-1/3 xl:flex justify-end flex-wrap">
 
               <h2 className="mt-2  yellow heading-4 font-semibold uppercase leading-none">

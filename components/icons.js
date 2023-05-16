@@ -140,7 +140,7 @@ export const QualityIcons = () => {
 
 export const Logo = () => {
   return(
-<svg className="fill-white w-40 xl:w-80" version="1.1" id="Layer_1"  x="0px" y="0px"
+<svg id="nav-logo" className="fill-white w-40 xl:w-80" version="1.1"   x="0px" y="0px"
 	 viewBox="0 0 356.87 109.57" >
 
 <g>

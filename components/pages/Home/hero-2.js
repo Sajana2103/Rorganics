@@ -1,6 +1,6 @@
 const HeroSecond = () => {
   return (
-    <div className=" h-screen " >
+    <div className=" h-screen page-content-wrapper" >
       <div className="relative  ">
         <video className="absolute top-0 left-0 object-cover -z-10 pointer-events-none" 
         autoPlay loop muted playsInline ><source src='assets/videos/city_2.mp4' /></video>
