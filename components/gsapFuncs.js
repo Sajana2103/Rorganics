@@ -22,7 +22,7 @@ export const setupMenuTextAnimation = (page,gsap) => {
       gsap.to('.menu-text1',{
         scrollTrigger:{
           trigger:child,
-          start:'top +=30px',
+          start:'top top',
           // end:'bottom bottom',
           // end: "bottom +=2500px",
 
@@ -39,7 +39,7 @@ export const setupMenuTextAnimation = (page,gsap) => {
       gsap.to('#nav-logo',{
         scrollTrigger:{
           trigger:child,
-          start:'top +=30px',
+          start:'top top',
           // end:'bottom bottom',
           toggleActions:toggleActions,
           // id:'DARK BG '+idx,markers:true
@@ -49,7 +49,7 @@ export const setupMenuTextAnimation = (page,gsap) => {
       gsap.to('.menu-text1',{
         scrollTrigger:{
           trigger:child,
-          start:'top +=30px',
+          start:'top top',
           // end:'bottom bottom',
           toggleActions:toggleActions
         },color:'white',duration:0.2
@@ -116,7 +116,7 @@ export function setupSplits(SplitText,gsap) {
         start: "top 85%",
         // markers:true,id:'lg title'
       },
-      duration: 0.5,
+      duration: 0.3,
       ease: "circ.out",
       y: 150,
       stagger: 0.1,
@@ -139,7 +139,7 @@ export function setupSplits(SplitText,gsap) {
         toggleActions: "restart pause resume reverse",
         start: "top 85%",
       },
-      duration: 0.5,
+      duration: 0.3,
       ease: "circ.out",
       y: 150,
       stagger: 0.1,
@@ -163,7 +163,7 @@ export function setupSplits(SplitText,gsap) {
         start: "top 85%",
         // markers:true,id:'med title'
       },
-      duration: 0.5,
+      duration: 0.3,
       ease: "circ.out",
       y: 150,
       stagger: 0.1,

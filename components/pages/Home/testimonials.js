@@ -5,7 +5,7 @@ const CustomerTestimonials = () => {
   const logos = ['knorr.png', 'nestle.png', 'knorr.png', 'nestle.png', 'knorr.png', 'nestle.png',
     'knorr.png', 'nestle.png', 'knorr.png', 'nestle.png',]
   return (
-    <div id="home-testimonials" className="page-content-wrapper light-bg">
+    <div id="home-testimonials" className="page-content-wrapper ">
       <div className="light-bg bg-white  maroon  xl:py-32  py-10 ">
 
       

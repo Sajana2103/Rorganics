@@ -1,7 +1,7 @@
 import Image from "next/image"
 const Environment = () => {
   return (
-    <div className="  light-bg page-content-wrapper">
+    <div className=" page-content-wrapper">
       <div className="lightAmber-bg xl:py-20 xl:px-24 px-4 py-10 ">
         
       <div className="flex flex-wrap gap-20 mt-6">

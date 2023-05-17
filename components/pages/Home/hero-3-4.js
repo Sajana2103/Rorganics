@@ -7,7 +7,7 @@ const HeroThirdAndForth = () => {
   const contentRef = useRef()
 
   return (
-    <div className="h-screen light-bg page-content-wrapper"  ref={containerRef} id="home-innovative" >
+    <div className="h-screen  page-content-wrapper"  ref={containerRef} id="home-innovative" >
       <div className="relative  threejs-animation">
         <Loading container={contentRef.current} />
 
@@ -15,7 +15,7 @@ const HeroThirdAndForth = () => {
       <div>
         <div ref={contentRef} className=" xl:py-20 xl:px-24 p-4" >
           <div className="threejs-content-1 ">
-          <div className=" xl:w-2/3 ">
+          <div className=" xl:w-3/4 ">
 
             <h1 className="heading-second text-8xl font-normal uppercase leading-none split-text-large
             mt-20 lg:mt-2">Innovative Technology</h1>

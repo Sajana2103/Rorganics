@@ -16,6 +16,12 @@ const Navigation = () => {
   const splitWords = useRef()
   const navRef = useRef()
   let splitArr = []
+  let white = 'white'
+  let maroon = 'rgb(103, 35, 73)' 
+  let previousColor
+ let currentColor
+ let menuTl
+
   useEffect(() => {
     if (navRef.current) {
       // gsap.registerPlugin(ScrollTrigger)
@@ -27,6 +33,7 @@ const Navigation = () => {
       gsap.timeline({defaults:{ease:'Power1.In',duration:0.5}})
       .to(dots,{opacity:1,stagger:0.3})
       .repeat(-1)
+
       // console.log('split words', pathname, splitWords)
     }
   }, [path,pathname])
@@ -42,22 +49,34 @@ const Navigation = () => {
   const openMenu = () => {
     let smoother = ScrollSmoother.get()
 
-    let menuTl
     isDesktop.current = window.devicePixelRatio < 2
-
     // console.log('menu location', pathRef.current)
     if (!menuTl) {
 
-      menuTl = gsap.timeline({ defaults: { duration: 0.4, ease: 'Power4.easeIn' } })
+      menuTl = gsap.timeline({ defaults: { duration: 0.4, ease: 'Power4.easeIn' },
+        onStart:() => {
+          console.log('start')
+        if(smoother)smoother.paused(true)
+      },onComplete:()=> {
+
+      },
+    onReverseComplete: ()=> {
+      console.log('reverse')
+      if(smoother)smoother.paused(false)
+    } })
       console.log('navigation runs')
       if (isDesktop.current) {
         // console.log('desktop menu', pageName.location)
-
         menuTl
           .pause()
 
           .to('#menu-wrapper', { display: 'block', duration: 0 })
           .fromTo('#menu-container', { yPercent: 100 }, { yPercent: 0, duration: 1 })
+          .to('#stroke1',{translateY:'10px'},'<')
+          .to('#stroke3',{translateY:'-10px'},'<')
+          .to('#stroke2',{opacity:0,duration:0.2},)
+          .to('#stroke1',{rotation:45,transformOrigin: "50%  0px"},'<')
+          .to('#stroke3',{rotation:-45,transformOrigin: "50%  0px"},'<')
 
         // .fromTo('#scroll-skip', { display: path === '/' && pageName.location === 'hero' 
         // && isDesktop ? 'flex' : 'none',opacity:1 }, { display: 'none',opacity:0 }, '<')
@@ -104,28 +123,44 @@ const Navigation = () => {
     }
 
     if (open === false) {
-      menuTl.play(0)
+      menuTl.play()
       open = true
-      if (isDesktop.current) smoother.paused(open)
+      currentColor = document.querySelector('#nav-logo').style.fill
+      console.log(currentColor)
+      if(currentColor===maroon){
+        previousColor = maroon
+        gsap.fromTo('.menu-text1',{color:maroon},{color:white,duration:1},'<')
+        gsap.fromTo('#nav-logo',{color:maroon},{fill:white,duration:1},'<')
+      }
+      // if (isDesktop.current) smoother.paused(open)
       console.log('menu open', open)
     }
     else {
-      menuTl.reverse(0)
+      menuTl.reverse()
+      // menuTl.reversed(true)
+
+      console.log('reverse',menuTl)
       open = false
-      if (isDesktop.current) smoother.paused(open)
+      currentColor = document.querySelector('#nav-logo').style.fill
+      if(previousColor===maroon){
+        previousColor = null
+        gsap.fromTo('.menu-text1',{color:white},{color:maroon,duration:1},'<')
+        gsap.fromTo('#nav-logo',{color:white},{fill:maroon,duration:1},'<')
+      }
+      // if (isDesktop.current) smoother.paused(open)
       console.log('menu open', open)
     }
   }
   const throttledClick = useThrottledCallback(openMenu, 1000, { trailing: false })
   return (
     <div ref={navRef}>
-      <div id="loadingScreen" className=" maroon-bg fixed top-0 bottom-0 right-0 left-0 z-50
+      <div style={{zIndex:'100'}} id="loadingScreen" className=" maroon-bg fixed top-0 bottom-0 right-0 left-0 z-50
       flex flex-wrap justify-center text-center items-center
       ">
         <LogoLoading/>
       </div>
 
-      <div className={'fixed z-40 content-center w-full'}>
+      <div className='fixed z-50 content-center w-full'>
         <div className=" grid h-16 grid-cols-2 content-center items-center 
         lg:my-10 lg:mx-4 my-4 mx-2">
           <div className="w-1/2">
@@ -141,9 +176,9 @@ const Navigation = () => {
                   </h3>
                 </Link>
                 :
-                <h3 className="menu-text1 yellow bold"> Menu</h3>
+                <h3 className="menu-text1 white bold"> Menu</h3>
             }
-            <h3 className="menu-text2 yellow bold" >
+            <h3 className="menu-text2 white bold" >
               {
                 splitWords.current && splitWords.current[2] ?
                   <span>

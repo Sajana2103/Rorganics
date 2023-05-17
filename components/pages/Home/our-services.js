@@ -2,7 +2,7 @@ import Image from "next/image"
 import { customLoader } from "../../customFunctions"
 const OurServices = () => {
   return(
-    <div id="home-our-services" className="page-content-wrapper light-bg">
+    <div id="home-our-services" className="page-content-wrapper ">
        <div className="lightAmber-bg xl:h-screen xl:py-20 xl:pl-24 px-4 py-10 page-content-wrapper">
       <h2 className="heading-4 font-semibold maroon uppercase">Our Services</h2>
       <div className="xl:flex mt-6">
