@@ -1,8 +1,11 @@
+import OtherPagesWrapper from "../../../components/otherPagesWrapper"
+import AboutUsHTML from "../../../components/pages/about-us/about-us-html"
 const AboutUs = () => {
   return(
-    <div className="xl:py-32 xl:px-40 px-4 ">
-    <h1 className="heading-2 marron">ABOUT US</h1>
-    </div>
+    <OtherPagesWrapper>
+
+    <AboutUsHTML/>
+    </OtherPagesWrapper>
   )
 }
 export default AboutUs

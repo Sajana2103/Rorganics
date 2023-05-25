@@ -149,7 +149,6 @@ function Threejs({ container, isLoaded, models, animations }) {
         },);
         let pages = document.querySelector('.main-page') 
         setupMenuTextAnimation(pages,gsap)
-  
         setupSplits(SplitText,gsap)
         setTimeout(() => {
 

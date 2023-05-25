@@ -1,11 +1,11 @@
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 export const setupMenuTextAnimation = (page,gsap) => {
   ScrollTrigger.getAll()
-  console.log(page)
+  // console.log(page)
   page.childNodes.forEach((child,idx) => {
     let toggleActions ='play complete restart reset'
     // console.log('menuTextANIMATIONS',child)
-    console.log(child)
+    console.log(document.querySelectorAll('.menu-text1'))
     if(child.classList.contains('light-bg')){
       
       // console.log('LIGHT BG',child)

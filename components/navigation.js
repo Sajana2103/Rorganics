@@ -3,7 +3,7 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { ScrollSmoother } from "gsap/dist/ScrollSmoother"
 import { gsap } from "gsap"
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useLayoutEffect } from "react"
 import { useThrottledCallback } from "use-debounce"
 
 const Navigation = () => {
@@ -22,7 +22,7 @@ const Navigation = () => {
  let currentColor
  let menuTl
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (navRef.current) {
       // gsap.registerPlugin(ScrollTrigger)
       setPath(window.location.pathname)
@@ -160,7 +160,7 @@ const Navigation = () => {
         <LogoLoading/>
       </div>
 
-      <div className='fixed z-50 content-center w-full'>
+      <div id="navigation-main" className='fixed z-50 content-center w-full'>
         <div className=" grid h-16 grid-cols-2 content-center items-center 
         lg:my-10 lg:mx-4 my-4 mx-2">
           <div className="w-1/2">
@@ -171,7 +171,7 @@ const Navigation = () => {
             {
               splitWords.current && splitWords.current[1] ?
                 <Link target="_self" href={`/${splitWords.current[1]}`}>
-                  <h3 className="menu-text1 yellow bold" >
+                  <h3 className="menu-text1 white bold" >
                     {replaceHyphens(capitalizeFirstLetter(splitWords.current[1]))}
                   </h3>
                 </Link>
